@@ -1,0 +1,28 @@
+Replaced & with &amp;
+
+Replaced all \n\n with \n's
+
+Used find ^.*$ to find every single line and <p> \1 </p> to replace and wrap it in p
+
+Used <p> (CHAPTER .*) </p> to find all chapter heading and <heading> \1 </heading> to change the heading
+
+to do chapter I used (</heading>) to find the end oh a chapter header yo put the <chapter> tag ti signify the start of a chapter, and used (<heading>) to mark the start of another chapter and placed the </chapter> on tghe line above to sigify the ending.
+
+Used "(.*)" to find all text inside quotations, and replaced it with <q>\1</p>
+
+Some manual changes including adding well format issues and close -open strat
+
+Used (\d\d* \w\w\w\w*\w*\w*) and ( \w\w\w\w*\w*\w* \d\d*)  to find the dates and <date> \1 </date> to wrap them
+
+Used (\d:\d\d ) to find time and <time> \1 </time> to wrap it
+
+11/4/2020
+
+I used (^.* Dracula (/w/d)*) to try and find any instances where dracula, It dosent work very well but it kinda works.
+I used 
+<chapter>
+<p>
+To try and highlight whos journal was being used in this chpater again it needs some refinment
+<chapter>
+<p> <diaryName>
+This was the replacment line
