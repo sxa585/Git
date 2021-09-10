@@ -1,0 +1,43 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+start = root
+
+root = element XML {Heading*, subheading*, instructions*, Ingrediants*}
+
+Heading = element Heading {rating*, ReciepeDif*, PrepTime*, text*}
+rating = element rating {text}
+
+ReciepeDif = element ReciepeDif {diff, text}*
+diff = attribute diff {text}
+PrepTime = element PrepTime {time,text}
+time = attribute time {text}
+
+subheading = element subheading {CookTime, ServingSize, History, text}
+
+CookTime = element CookTime {time, text}
+ServingSize = element ServingSize {size, text}
+size = attribute size {text}
+History = element History {text}
+
+instructions = element instructions {step1, step2, step3, optional, text}
+step1 = element step1 {step,text}
+step2 = element step2 {step,text}
+step3 = element step3 {step,text}
+step = attribute step {text}
+optional = element optional {des, text}
+des = attribute des {text}
+
+Ingrediants = element Ingrediants {Flour, BakingSoda, Salt, butter, sugar, BrownSugar, VanillaExtract, Eggs, ChoclateChips, nuts}
+Flour = element flour {amount, unit, text}
+BakingSoda = element BakingSoda {amount, unit, text}
+Salt = element Salt {amount, unit, text}
+butter = element butter {amount, unit, text}
+sugar = element sugar {amount, unit, text}
+BrownSugar = element Brownsugar {amount, unit, text}
+VanillaExtract = element VanillaExtract{amount, unit, text}
+Eggs = element Eggs {amount, unit, text}
+ChoclateChips = element ChoclateChips {amount, unit, text}
+nuts = element nuts {amount, unit, text}
+
+unit = attribute unit {text}
+amount = attribute amount {text}
+
